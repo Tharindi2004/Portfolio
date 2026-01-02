@@ -1,0 +1,232 @@
+/* ================= GENERAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f1f;
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(15, 15, 31, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #7f5af0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #7f5af0;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.avatar-glow {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(127,90,240,0.7) 0%, rgba(127,90,240,0) 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: glow 2.5s infinite alternate;
+}
+
+.avatar-glow img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px #7f5af0;
+    }
+    to {
+        box-shadow: 0 0 60px #7f5af0;
+    }
+}
+
+.hero h1 span {
+    color: #7f5af0;
+}
+
+.hero h3 {
+    margin-top: 10px;
+    color: #cfcfcf;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #bbbbbb;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #7f5af0;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px #7f5af0;
+    transform: scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #7f5af0;
+}
+
+/* ================= SKILLS ================= */
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skills-icons img {
+    width: 60px;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s;
+}
+
+.skills-icons img:hover {
+    transform: scale(1.3);
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* ================= PROJECTS ================= */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #1c1c3a;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.4);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px #7f5af0;
+}
+
+/* ================= CONTACT ================= */
+#contact a {
+    color: #7f5af0;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Scroll Animation */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.footer {
+  background: #0a0a0a;
+  padding: 30px;
+  text-align: center;
+  color: #aaa;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  font-size: 22px;
+  color: #7f5af0;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00ffd5;
+  transform: scale(1.2);
+}
